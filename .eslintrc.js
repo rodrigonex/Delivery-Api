@@ -17,5 +17,7 @@ module.exports = {
     camelcase: 'off',
     'import/extensions': 'off',
     'no-unresolved': 'off',
+    'prefer-const': 'off',
+    'no-return-assign': 'off',
   },
 };
