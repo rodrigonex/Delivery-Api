@@ -134,7 +134,9 @@ class OrderRepository {
 
   async ordersProducts() {
     let orders = JSON.parse(await readFile('pedidos.json', 'utf-8'));
+
     const lista = [];
+
     orders.pedidos.filter(order => order.entregue).forEach(order => {
       const index = lista.findIndex(it => it.produto === order.produto);
 
@@ -144,7 +146,6 @@ class OrderRepository {
         lista[index].quantidade++;
       }
     })
-
     lista.sort((a, b) => b.quantidade - a.quantidade);
 
     return new Promise((resolve) => resolve(lista.map(it => {

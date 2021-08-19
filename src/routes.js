@@ -13,6 +13,6 @@ router.delete('/orders/:id', OrderController.delete);
 router.get('/orders/clients/:cliente', OrderController.showClient);
 router.get('/orders/products/:product', OrderController.showProduct);
 
-router.get('/orders/products', OrderController.productOrder);
+router.get('/products', OrderController.productOrder);
 
 export default router;

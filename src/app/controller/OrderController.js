@@ -148,7 +148,7 @@ class OrderController {
   }
 
   async productOrder(request, response) {
-    const ordersProducts = await OrderRepository.findProducts();
+    const ordersProducts = await OrderRepository.ordersProducts();
 
     response.status(200).json(ordersProducts);
   }
